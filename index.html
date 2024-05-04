@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 2px solid #292924;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        h1 {
+            font-family: 'Calibri';
+            font-size: 22px;
+            line-height: 25px;
+            color: #292924;
+        }
+
+        .form__control__0 {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .form__control__0 input,
+        .form__control__0 button {
+            outline: none;
+            padding: 20px;
+            font-size: 20px;
+            border: 2px solid #292924;
+            border-radius: 5px;
+            color: #292924;
+        }
+
+        .form__control__0 button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="">
+            <h1>Calculator 1200 numb 200 = 16.6%</h1>
+            <div class="form__control__0">
+                <input type="text" placeholder="????" class="number__1__0">
+                <input type="text" placeholder="???" class="number__2__0">
+                <button class="click__1__0">RESULT</button>
+                <input type="text" value="??? %" class="result__1__0" readonly>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        let number__1__0 = document.querySelector('.number__1__0');
+        let number__2__0 = document.querySelector('.number__2__0');
+        let click__1__0 = document.querySelector('.click__1__0');
+        let result__1__0 = document.querySelector('.result__1__0');
+
+        click__1__0.onclick = function () {
+            let a = Number(number__1__0.value);
+            let b = Number(number__2__0.value);
+
+            let c = (b / a) * 100;
+
+            result__1__0.value = c;
+            // result__1__0
+        }
+
+    </script>
+</body>
+
+</html>
